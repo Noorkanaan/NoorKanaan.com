@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Real-Time Forum</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(to right, #eef2f7, #dce5f3);
+      font-family: 'Segoe UI', sans-serif;
+      padding: 60px 20px;
+      color: #2c3e50;
+    }
+
+    .container {
+      max-width: 850px;
+    }
+
+    h1, h2 {
+      font-weight: 700;
+    }
+
+    .section {
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      color: #0d6efd;
+    }
+
+    .highlight {
+      background: #f1f3f5;
+      border-left: 4px solid #0d6efd;
+      padding: 1rem;
+      font-family: 'Courier New', monospace;
+      border-radius: 5px;
+      font-size: 15px;
+      white-space: pre-wrap;
+    }
+
+    .blockquote {
+      background-color: #fff3cd;
+      padding: 1rem 1.2rem;
+      border-left: 5px solid #ffc107;
+      border-radius: 6px;
+      font-style: italic;
+      color: #856404;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    .icon {
+      color: #0d6efd;
+      margin-right: 10px;
+    }
+
+    .title-box {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .title-box h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+    }
+
+    .title-box p {
+      font-size: 1.2rem;
+      color: #6c757d;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title-box">
+      <h1>🧵 Real-Time Forum</h1>
+      <p>A live chat & post platform built with Go, WebSocket, and HTML – all in real-time.</p>
+    </div>
+
+    <!-- Features -->
+    <div class="section">
+      <h2><i class="bi bi-grid icon"></i>Features</h2>
+      <ul>
+        <li>🧑‍💼 User registration and login</li>
+        <li>✍️ Create and browse public posts</li>
+        <li>💬 Commenting system for discussions</li>
+        <li>🔒 Private messaging between users</li>
+        <li>🟢 Live online user tracking</li>
+        <li>✉️ Typing indicator notifications</li>
+        <li>🔐 Session management via UUID</li>
+        <li>🧠 View past messages sorted by recency</li>
+      </ul>
+    </div>
+
+    <!-- Requirements -->
+    <div class="section">
+      <h2><i class="bi bi-box icon"></i>Requirements</h2>
+      <ul>
+        <li>Go 1.20 or higher</li>
+        <li>Node.js (optional for development)</li>
+        <li>SQLite</li>
+        <li>A modern browser with WebSocket support</li>
+      </ul>
+    </div>
+
+    <!-- Project Structure -->
+    <div class="section">
+      <h2><i class="bi bi-folder icon"></i>Project Structure</h2>
+      <div class="highlight">.
+├── main.go           # HTTP server entry point
+├── index.html        # Frontend UI
+├── app.js            # JavaScript WebSocket logic
+├── databace.go       # Database handling
+├── ws.go             # WebSocket events
+├── session.go        # Online sessions
+├── struct.go         # Structs for users, messages, etc.
+├── /public/          # Static CSS/JS files
+└── /data.db          # SQLite database
+      </div>
+    </div>
+
+    <!-- How to Run -->
+    <div class="section">
+      <h2><i class="bi bi-play-circle icon"></i>How to Run</h2>
+      <ol>
+        <li>Ensure Go and SQLite are installed</li>
+        <li>Run the backend server:
+          <div class="highlight">go run main.go</div>
+        </li>
+        <li>Open in browser:
+          <div class="highlight">http://localhost:8080</div>
+        </li>
+      </ol>
+    </div>
+
+    <!-- Test Endpoint -->
+    <div class="section">
+      <h2><i class="bi bi-bug icon"></i>Test Endpoint</h2>
+      <p>Visit this link to check the server response:</p>
+      <div class="highlight">http://localhost:8080/exemple</div>
+      <p>You should see: <code>Exemple endpoint is working!</code></p>
+    </div>
+
+    <!-- Notes -->
+    <div class="section">
+      <h2><i class="bi bi-info-circle icon"></i>Notes</h2>
+      <ul>
+        <li>All data is stored in <code>data.db</code></li>
+        <li>Sessions reset on server restart</li>
+        <li>WebSocket endpoint: <code>ws://localhost:8080/ws</code></li>
+      </ul>
+    </div>
+
+    <!-- DB Tables -->
+    <div class="section">
+      <h2><i class="bi bi-database icon"></i>Database Tables</h2>
+      <ul>
+        <li><code>users</code> – user information</li>
+        <li><code>posts</code> – forum posts</li>
+        <li><code>comments</code> – post comments</li>
+        <li><code>private_messages</code> – private chats</li>
+        <li><code>notifications</code> – alerts (WIP)</li>
+      </ul>
+    </div>
+
+    <!-- Conclusion -->
+    <div class="section">
+      <h2><i class="bi bi-person-badge icon"></i>Developer Note</h2>
+      <p>This project showcases how real-time interactivity can be achieved using only Go, WebSocket, and frontend technologies – no frameworks, just speed and logic.</p>
+      <div class="blockquote">“Build real-time systems with real code, not magic.”</div>
+    </div>
+
+  </div>
+
+</body>
+</html>

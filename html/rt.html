@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Raytracer Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+      font-family: 'Segoe UI', sans-serif;
+      padding: 50px 20px;
+      color: #2c3e50;
+    }
+
+    h1, h2 {
+      font-weight: 700;
+    }
+
+    .section {
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      font-size: 1.7rem;
+      margin-bottom: 20px;
+      color: #0d6efd;
+    }
+
+    .highlight {
+      background: #f1f3f5;
+      border-left: 4px solid #0d6efd;
+      padding: 1rem;
+      font-family: 'Courier New', monospace;
+      border-radius: 5px;
+      font-size: 15px;
+      white-space: pre-wrap;
+    }
+
+    .blockquote {
+      background-color: #fff3cd;
+      padding: 1rem 1.2rem;
+      border-left: 5px solid #ffc107;
+      border-radius: 6px;
+      font-style: italic;
+      color: #856404;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    .icon {
+      color: #0d6efd;
+      margin-right: 10px;
+    }
+
+    .title-box {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .title-box h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+    }
+
+    .title-box p {
+      font-size: 1.2rem;
+      color: #6c757d;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title-box">
+      <h1>🧱 Raytracer – Project Guide</h1>
+      <p>Render 3D scenes using your own camera & math logic – no engines, just raw power and Rust.</p>
+    </div>
+
+    <!-- How to Run -->
+    <div class="section">
+      <h2><i class="bi bi-play-circle icon"></i>How to Run</h2>
+      <p>Run the raytracer in <strong>release mode</strong> for maximum performance:</p>
+      <div class="highlight">cargo run --release &lt;object_name&gt;</div>
+      <p><strong>Example:</strong></p>
+      <div class="highlight">cargo run --release cube</div>
+      <p>This command renders a cube based on the camera setup in <code>camera.rs</code>.</p>
+    </div>
+
+    <!-- Camera -->
+    <div class="section">
+      <h2><i class="bi bi-camera icon"></i>Camera Control</h2>
+      <p>Modify camera position and direction in <code>camera.rs</code>:</p>
+      <div class="highlight">
+let look_from = Vec3::new(...);  // Camera position
+let look_at = Vec3::new(...);    // Where the camera looks
+      </div>
+      <p>Adjust these for front, top, or side views in the <code>Camera::new()</code> function.</p>
+    </div>
+
+    <!-- Brightness -->
+    <div class="section">
+      <h2><i class="bi bi-lightbulb icon"></i>Brightness & Lighting</h2>
+      <p>To control scene brightness, update this line in <code>main.rs</code>:</p>
+      <div class="highlight">color = (color / (samples_per_pixel as f32)) * 1.5;</div>
+      <p>Increase <code>1.5</code> to brighten, decrease it for darker results.</p>
+    </div>
+
+    <!-- Output -->
+    <div class="section">
+      <h2><i class="bi bi-image icon"></i>Output</h2>
+      <p>After rendering, the final image is saved as:</p>
+      <div class="highlight">output.png</div>
+      <p>You can open it with any image viewer (e.g. Windows Photos, GIMP, etc.).</p>
+    </div>
+
+    <!-- Why It Matters -->
+    <div class="section">
+      <h2><i class="bi bi-stars icon"></i>Why This Project?</h2>
+      <p>This raytracer teaches how to simulate 3D rendering from scratch using only:</p>
+      <ul>
+        <li>📐 Vector math and dot product logic</li>
+        <li>🧠 Camera projections</li>
+        <li>⚡ Rust performance and memory safety</li>
+      </ul>
+      <div class="blockquote">“Build smart, not heavy.”</div>
+    </div>
+
+  </div>
+
+</body>
+</html>

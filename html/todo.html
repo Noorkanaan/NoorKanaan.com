@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ToDoMVC – MiniFramework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+      font-family: 'Segoe UI', sans-serif;
+      padding: 60px 20px;
+      color: #2c3e50;
+    }
+
+    .container {
+      max-width: 850px;
+    }
+
+    h1, h2 {
+      font-weight: 700;
+    }
+
+    .section {
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      color: #0d6efd;
+    }
+
+    .highlight {
+      background: #f1f3f5;
+      border-left: 4px solid #0d6efd;
+      padding: 1rem;
+      font-family: 'Courier New', monospace;
+      border-radius: 5px;
+      font-size: 15px;
+      white-space: pre-wrap;
+    }
+
+    .blockquote {
+      background-color: #fff3cd;
+      padding: 1rem 1.2rem;
+      border-left: 5px solid #ffc107;
+      border-radius: 6px;
+      font-style: italic;
+      color: #856404;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    .icon {
+      color: #0d6efd;
+      margin-right: 10px;
+    }
+
+    .title-box {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .title-box h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+    }
+
+    .title-box p {
+      font-size: 1.2rem;
+      color: #6c757d;
+    }
+
+    table th, table td {
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title-box">
+      <h1>✅ ToDoMVC – MiniFramework</h1>
+      <p>Built without any external libraries. Just pure JavaScript, a custom framework, and smart UI logic.</p>
+    </div>
+
+    <!-- Features -->
+    <div class="section">
+      <h2><i class="bi bi-lightning-charge icon"></i>Core Features</h2>
+      <ul>
+        <li>Add, edit, and delete tasks</li>
+        <li>Mark tasks as complete/incomplete</li>
+        <li>Clear completed or all tasks</li>
+        <li>Filter tasks by status: <code>#all</code>, <code>#completed</code>, <code>#notcompleted</code></li>
+        <li>Live counters: total, completed, and active tasks</li>
+      </ul>
+    </div>
+
+    <!-- Project Structure -->
+    <div class="section">
+      <h2><i class="bi bi-folder icon"></i>Project Structure</h2>
+      <div class="highlight">📂 ToDoMVC/
+├── app.js         # Main Todo logic
+├── miniframe.js   # Custom JS framework (MiniFrame)
+├── server.js      # Express server for local hosting
+├── index.html     # Entry point
+└── style.css      # Styling and layout
+      </div>
+    </div>
+
+    <!-- How It Works -->
+    <div class="section">
+      <h2><i class="bi bi-gear icon"></i>How It Works</h2>
+      <ul>
+        <li><strong>MiniFrame:</strong> Handles:
+          <ul>
+            <li><code>useState</code> – Custom state management</li>
+            <li><code>createElement</code> – Virtual DOM element creation</li>
+            <li><code>renderApp</code> – Efficient DOM re-rendering</li>
+          </ul>
+        </li>
+        <li><strong>app.js:</strong> Implements core Todo logic and UI</li>
+        <li><strong>server.js:</strong> Runs a simple Express server</li>
+        <li><strong>index.html:</strong> Loads everything and mounts the app</li>
+      </ul>
+    </div>
+
+    <!-- User Guide -->
+    <div class="section">
+      <h2><i class="bi bi-ui-checks icon"></i>User Guide</h2>
+      <table class="table table-bordered table-striped">
+        <thead class="table-light">
+          <tr>
+            <th>Action</th>
+            <th>How to Perform</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Add a task</td><td>Type in input field → Click "AddTodo"</td></tr>
+          <tr><td>Edit a task</td><td>Click "Edit" next to the task</td></tr>
+          <tr><td>Toggle status</td><td>Click the task to mark complete/incomplete</td></tr>
+          <tr><td>Complete all</td><td>Click "Select All"</td></tr>
+          <tr><td>Delete all</td><td>Click "Delete All"</td></tr>
+          <tr><td>Clear completed</td><td>Click "ClearCompleted"</td></tr>
+          <tr><td>Filter tasks</td><td>Use buttons or URL hash (e.g. <code>#completed</code>)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Conclusion -->
+    <div class="section">
+      <h2><i class="bi bi-star icon"></i>Why This Project Matters</h2>
+      <p>This project proves that advanced UI features like state, filtering, and rendering can be implemented without heavy libraries.</p>
+      <div class="blockquote">“Build smart, not heavy.”</div>
+    </div>
+  </div>
+
+</body>
+</html>
