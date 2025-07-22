@@ -37,3 +37,9 @@ project-folder/
 │
 └── README.md
 ```
+
+## 📬 Contact
+
+- 📧 Gmail: [your-email@gmail.com](mailto:noorkanaan16@gmail.com)
+- 💼 LinkedIn: [linkedin.com/in/yourusername](www.linkedin.com/in/noor-kanaan)
+- 💻 GitHub: [github.com/yourusername](https://github.com/Noorkanaan)
